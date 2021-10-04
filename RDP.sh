@@ -23,8 +23,7 @@ sudo adduser ALOK chrome-remote-desktop
 printf "\nSetup Complete " >&2 ||
 printf "\nError Occured " >&2
 printf '\nCheck https://remotedesktop.google.com/headless  Copy Command Of Debian Linux And Paste Down\n'
-read -p "Paste Here: " CRP
-su - ALOK -c """$CRP"""
+su - ALOK -c """DISPLAY= /opt/google/chrome-remote-desktop/start-host --code="4/0AX4XfWia6HxJfbwt3Xo4GBglQn90KQqBDBtzcCMBNs7q6gmtANbS4l0E2Un5_PQiZI7ALQ" --redirect-url="https://remotedesktop.google.com/_/oauthredirect" --name=$(hostname)"""
 printf 'Check https://remotedesktop.google.com/access/ \n\n'
 if sudo apt-get upgrade &> /dev/null
 then
